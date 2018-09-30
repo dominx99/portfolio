@@ -43,7 +43,7 @@ class TranslationMiddleware
             ));
         }
 
-        $_SESSION['lang'] = $lang;
+        setcookie('lang', $lang, time() + 3600, '/');
 
         $translator = new LanguageTranslator($this->container);
         $translator->boot($lang);

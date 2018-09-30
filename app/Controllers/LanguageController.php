@@ -29,8 +29,8 @@ class LanguageController extends Controller
     {
         $route = 'home';
 
-        if (isset($_SESSION['routeBack'])) {
-            $route = $_SESSION['routeBack'];
+        if (isset($_COOKIE['routeBack'])) {
+            $route = $_COOKIE['routeBack'];
         }
 
         return $response->withRedirect($this->router->pathFor($route, [

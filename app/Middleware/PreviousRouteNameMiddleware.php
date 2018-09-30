@@ -11,7 +11,7 @@ class PreviousRouteNameMiddleware
     {
         $route = $request->getAttribute('route');
 
-        $_SESSION['routeBack'] = $route->getName();
+        setcookie('routeBack', $route->getName(), time() + 3600, '/');
 
         return $next($request, $response);
     }

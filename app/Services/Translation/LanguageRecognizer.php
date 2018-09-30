@@ -36,8 +36,8 @@ class LanguageRecognizer
 
         $lang = $browserLanguage;
 
-        if (isset($_SESSION['lang'])) {
-            $lang = $_SESSION['lang'];
+        if (isset($_COOKIE['lang'])) {
+            $lang = $_COOKIE['lang'];
         }
 
         if (!in_array($lang, $this->avaibleLanguages)) {
