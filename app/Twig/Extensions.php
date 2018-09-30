@@ -4,7 +4,7 @@ namespace App\Twig;
 
 use Slim\Container;
 
-class RouteExtension extends \Twig_Extension
+class Extensions extends \Twig_Extension
 {
     /**
      * @var \Slim\Container

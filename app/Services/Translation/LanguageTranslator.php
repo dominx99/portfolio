@@ -45,12 +45,16 @@ class LanguageTranslator
 
     /**
      * @param string $key
-     * @param array $args
+     * @param array|string|integer $args
      * @param integer $num
      * @return string
      */
-    public function translate(string $key, array $args = [], int $num = 0): string
+    public function translate(string $key, $args = [], int $num = 0): string
     {
+        if (!is_array($args)) {
+            $args = [$args];
+        }
+
         if ($args) {
             return $this->translator->plural($key, $num, $args);
         }
