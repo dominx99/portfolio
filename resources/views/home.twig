@@ -1,3 +1,9 @@
-{% include "navigation.twig" %}
+{% extends "layouts/app.twig" %}
 
-{{ "home" | trans }}
+{% block content %}
+
+    <div class="container">
+        {% include "partials/about.twig" %}
+    </div>
+
+{% endblock content %}

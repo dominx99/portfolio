@@ -1,0 +1,97 @@
+.nav {
+    background-color: darken($primary, 5);
+    font-size: 110%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 20px;
+    z-index: 1070;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        .brand {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+
+            a {
+                font-size: 150%;
+                display: block;
+                padding: 1.4rem .5rem;
+            }
+
+            .open {
+                margin-left: auto;
+                height: 35px;
+                margin-right: .5rem;
+                background-color: transparent;
+                border: none;
+                color: $light;
+                border: 2px solid $light;
+                border-radius: 3px;
+                display: flex;
+
+                &.opened {
+                    background-color: $light;
+                    color: $primary;
+                }
+
+                &:active, &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .menu {
+            display: none;
+            flex-direction: column;
+            padding-bottom: .5rem;
+
+            &.opened {
+                display: flex;
+            }
+
+            a {
+                display: block;
+                padding: 1rem .5rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $md) {
+    .nav {
+        background-color: $primary;
+
+        .container {
+            flex-direction: row;
+
+            .brand {
+                a {
+                    padding: 1.4rem 1rem;
+                }
+
+                .open {
+                    display: none;
+                }
+            }
+
+            .menu {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-left: auto;
+                padding-bottom: 0;
+
+                a {
+                    padding: 1.4rem 1rem;
+                    margin-left: 1rem;
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+}

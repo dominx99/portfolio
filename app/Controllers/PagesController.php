@@ -14,12 +14,4 @@ class PagesController extends Controller
     {
         return $this->view->render(new Response(), 'home.twig');
     }
-
-    /**
-     * @return \Psr\Http\Message\ResponseInterface
-     */
-    public function about(): ResponseInterface
-    {
-        return $this->view->render(new Response(), 'about.twig');
-    }
 }
